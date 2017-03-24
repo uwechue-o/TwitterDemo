@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">TwitterDemo</string>
+    <string name="about">About</string>
+    <string name="about_text">This app logs a user in to Twitter and then searches for the most popular recent tweets containing the specified tag.
+        The search results are ordered by the retweet count.\nPreviously-entered hashtags can be viewed via the \'Previous hashtags\' menu item.</string>
+    <string name="stored_tags">Previous hashtags</string>
+    <string name="stored_tags_text">SQLite and SQLBrite integration still in progress.</string>
+
+    <string name="ui_hashtag">hashtag</string>
+    <string name="ui_userinfo">Fetch Twitter data</string>
+    <string name="ui_gettoken">Request Token</string>
+    <string name="ui_dashes">-----</string>
+
+    <string name="missing_tweetID">missing tweet ID</string>
+    <string name="missing_tweet">missing tweet</string>
+    <string name="missing_name">missing Member Name</string>
+    <string name="missing_location">missing location data</string>
+    <string name="missing_image">missing user picture</string>
+
+
+    <string name="fail_user_credentials">Failure while requesting user credentials</string>
+    <string name="fail_no_tweets">No tweets found for chosen hashtag.</string>
+    <string name="fail_token_request">Failure while requesting token</string>
+    <string name="fail_no_image_data">No image file retrieved.</string>
+    <string name="fail_image_webservicecall">Image fetch request failed.</string>
+    <string name="fail_data_fetch">Unable to fetch any Twitter data at this time.</string>
+    <string name="fail_tags_fetch">Unable to fetch any hashtags data at this time.</string>
+
+    <string name="need_username">Please provide a username</string>
+    <string name="auth_success">You are now authenticated to proceed :-)</string>
+    <string name="retweet_count">%1$s retweets</string>
+    <string name="dismiss">dismiss</string>
+
+    <string name="ui_refreshrate">Refresh rate:</string>
+    <string name="interval_5seconds">5 sec</string>
+    <string name="interval_10seconds">10 sec</string>
+    <string name="interval_20seconds">20 sec</string>
+    <string name="interval_60seconds">60 sec</string>
+
+    <string name="data_persisted">Database updated.</string>
+
+
+</resources>

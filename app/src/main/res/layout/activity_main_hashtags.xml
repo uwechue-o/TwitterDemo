@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="com.dmt.twitterdemo.com.com.twiitterdemo.MainActivity">
+
+        <com.dmt.twitterdemo.DialogSpinner
+            android:id="@+id/hashtags_spinner"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="gone"
+            />
+
+        <LinearLayout
+            android:id="@+id/hashtag_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/hashtag_textview"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:gravity="center_vertical"
+                android:text="@string/ui_hashtag" />
+
+            <EditText
+                android:id="@+id/hashtag_edittext"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:gravity="center"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:maxLines="1" />
+        </LinearLayout>
+
+
+        <Switch
+            android:id="@+id/toggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="20dp"
+            android:checked="false"
+            android:textSize="14sp"
+            android:textOff="NO"
+            android:textOn="YES"
+            android:text="Filter out duplicates Users    "
+            android:layout_marginBottom="10dp"
+            android:layout_below="@id/hashtag_container"/>
+
+        <LinearLayout
+            android:id="@+id/refreshRate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/toggle">
+
+            <TextView
+                android:id="@+id/refreshText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/ui_refreshrate"
+                android:textSize="14sp"/>
+
+            <RadioGroup
+                android:id="@+id/radiogrp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation='horizontal'>
+
+                <RadioButton
+                    android:id="@+id/refresh5sec"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/interval_5seconds"
+                    android:textSize="10sp"
+                    android:checked="false"
+                    android:onClick="onRadioButtonClicked"/>
+
+                <RadioButton
+                    android:id="@+id/refresh10sec"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/interval_10seconds"
+                    android:textSize="10sp"
+                    android:checked="false"
+                    android:onClick="onRadioButtonClicked"/>
+
+                <RadioButton
+                    android:id="@+id/refresh20sec"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/interval_20seconds"
+                    android:textSize="10sp"
+                    android:checked="false"
+                    android:onClick="onRadioButtonClicked"/>
+
+                <RadioButton
+                    android:id="@+id/refresh60sec"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/interval_60seconds"
+                    android:textSize="10sp"
+                    android:checked="true"
+                    android:onClick="onRadioButtonClicked"/>
+
+            </RadioGroup>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/request_token_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:onClick="onClickRequestToken"
+            android:text="@string/ui_gettoken" />
+
+        <Button
+            android:id="@+id/request_user_details_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:onClick="onClickGetTwitterData"
+            android:text="@string/ui_userinfo"
+            android:layout_above="@+id/request_token_button"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:scrollbars="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/request_user_details_button"
+            android:layout_below="@id/refreshRate"
+            android:layout_marginTop="15dp"
+            />
+
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>
+
