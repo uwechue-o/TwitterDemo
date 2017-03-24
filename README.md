@@ -5,7 +5,7 @@ A custom Twitter client demo
 
 This is a native/Java app and makes use of the following technologies: RxJava2, Retrofit2, SQLite&SQLBrite, JNI, and Stetho(for examining the db in real-time).
 
-**First Steps: replace the placeholder strings in /src/cpp/mydata.cpp with valid Twitter Secret and Twitter Consumer Key strings, then recompile.**
+**First Steps: replace the placeholder strings in _/src/cpp/mydata.cpp_ with valid Twitter Secret and Twitter Consumer Key strings, then recompile.**
 
 Notes:
 
